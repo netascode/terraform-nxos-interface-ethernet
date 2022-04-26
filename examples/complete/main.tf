@@ -1,4 +1,4 @@
-module "nxos_bgp" {
+module "nxos_interface_ethernet" {
   source  = "netascode/interface-ethernet/nxos"
   version = ">= 0.0.1"
 
