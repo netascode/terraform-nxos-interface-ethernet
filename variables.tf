@@ -37,7 +37,7 @@ variable "auto_negotiation" {
 }
 
 variable "bandwidth" {
-  description = "The bandwidth parameter for a routed interface, port channel, or subinterface. Minimum value: 0. Maximum value: 100000000."
+  description = "Interface bandwidth. Minimum value: 0. Maximum value: 100000000."
   type        = number
   default     = 0
 
@@ -203,7 +203,7 @@ variable "trunk_vlans" {
 
   validation {
     condition     = can(regex("^[0-9,-]*$", var.trunk_vlans))
-    error_message = "Allowed format: `1-2,4-5,100`."
+    error_message = "Allowed characters: `0`-`9`, `,`, `-`."
   }
 }
 

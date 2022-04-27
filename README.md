@@ -30,13 +30,13 @@ module "nxos_interface_ethernet" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
-| <a name="requirement_nxos"></a> [nxos](#requirement\_nxos) | >= 0.3.5 |
+| <a name="requirement_nxos"></a> [nxos](#requirement\_nxos) | >= 0.3.6 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_nxos"></a> [nxos](#provider\_nxos) | >= 0.3.5 |
+| <a name="provider_nxos"></a> [nxos](#provider\_nxos) | >= 0.3.6 |
 
 ## Inputs
 
@@ -46,7 +46,7 @@ module "nxos_interface_ethernet" {
 | <a name="input_access_vlan"></a> [access\_vlan](#input\_access\_vlan) | Native VLAN. Minimum value: 1. Maximum value: 3967. | `number` | `1` | no |
 | <a name="input_admin_state"></a> [admin\_state](#input\_admin\_state) | Administrative port state. Set `true` for `up` or `false` for `down`. | `bool` | `true` | no |
 | <a name="input_auto_negotiation"></a> [auto\_negotiation](#input\_auto\_negotiation) | Administrative port auto-negotiation. Choices: `on`, `off`, `25G`. | `string` | `"on"` | no |
-| <a name="input_bandwidth"></a> [bandwidth](#input\_bandwidth) | The bandwidth parameter for a routed interface, port channel, or subinterface. Minimum value: 0. Maximum value: 100000000. | `number` | `0` | no |
+| <a name="input_bandwidth"></a> [bandwidth](#input\_bandwidth) | Interface bandwidth. Minimum value: 0. Maximum value: 100000000. | `number` | `0` | no |
 | <a name="input_delay"></a> [delay](#input\_delay) | The administrative port delay time. Minimum value: 1. Maximum value: 16777215. | `number` | `1` | no |
 | <a name="input_description"></a> [description](#input\_description) | Interface description. | `string` | `""` | no |
 | <a name="input_duplex"></a> [duplex](#input\_duplex) | Interface mode. Choices: `auto`, `full`, `half`. | `string` | `"auto"` | no |
