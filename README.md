@@ -42,6 +42,7 @@ module "nxos_interface_ethernet" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_device"></a> [device](#input\_device) | A device name from the provider configuration. | `string` | `null` | no |
 | <a name="input_id"></a> [id](#input\_id) | Interface ID. Allowed format: `1/1`. | `string` | n/a | yes |
 | <a name="input_access_vlan"></a> [access\_vlan](#input\_access\_vlan) | Native VLAN. Minimum value: 1. Maximum value: 3967. | `number` | `1` | no |
 | <a name="input_admin_state"></a> [admin\_state](#input\_admin\_state) | Administrative port state. Set `true` for `up` or `false` for `down`. | `bool` | `true` | no |

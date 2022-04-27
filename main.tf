@@ -3,6 +3,7 @@ locals {
 }
 
 resource "nxos_physical_interface" "l1PhysIf" {
+  device                   = var.device
   interface_id             = local.id
   fec_mode                 = var.fec_mode
   access_vlan              = var.layer3 ? "unknown" : "vlan-${var.access_vlan}"
@@ -29,6 +30,7 @@ resource "nxos_physical_interface" "l1PhysIf" {
 
 resource "nxos_physical_interface_vrf" "nwRtVrfMbr" {
   count        = var.layer3 ? 1 : 0
+  device       = var.device
   interface_id = local.id
   vrf_dn       = "sys/inst-${var.vrf}"
   depends_on = [
@@ -38,6 +40,7 @@ resource "nxos_physical_interface_vrf" "nwRtVrfMbr" {
 
 resource "nxos_ipv4_interface" "ipv4If" {
   count        = var.layer3 ? 1 : 0
+  device       = var.device
   vrf          = var.vrf
   interface_id = local.id
   unnumbered   = var.ip_unnumbered
@@ -49,6 +52,7 @@ resource "nxos_ipv4_interface" "ipv4If" {
 
 resource "nxos_ipv4_interface_address" "ipv4Addr" {
   count        = var.layer3 && var.ipv4_address != null ? 1 : 0
+  device       = var.device
   vrf          = var.vrf
   interface_id = local.id
   address      = var.ipv4_address
