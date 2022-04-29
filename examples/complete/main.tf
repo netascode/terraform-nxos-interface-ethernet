@@ -1,6 +1,6 @@
 module "nxos_interface_ethernet" {
   source  = "netascode/interface-ethernet/nxos"
-  version = ">= 0.0.1"
+  version = ">= 0.1.0"
 
   id                 = "1/23"
   description        = "Terraform was here"
