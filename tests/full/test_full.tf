@@ -11,6 +11,10 @@ terraform {
   }
 }
 
+resource "nxos_vrf" "vrf" {
+  name = "VRF1"
+}
+
 module "main" {
   source = "../.."
 
@@ -22,6 +26,8 @@ module "main" {
   ipv4_address       = "1.1.1.1/24"
   vrf                = "VRF1"
   urpf               = "loose"
+
+  depends_on = [nxos_vrf.vrf]
 }
 
 data "nxos_physical_interface" "l1PhysIf" {
