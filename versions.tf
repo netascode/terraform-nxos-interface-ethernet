@@ -8,6 +8,4 @@ terraform {
       version = ">= 0.3.7"
     }
   }
-
-  experiments = [module_variable_optional_attrs]
 }
