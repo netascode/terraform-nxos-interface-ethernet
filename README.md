@@ -30,13 +30,13 @@ module "nxos_interface_ethernet" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
-| <a name="requirement_nxos"></a> [nxos](#requirement\_nxos) | >= 0.3.7 |
+| <a name="requirement_nxos"></a> [nxos](#requirement\_nxos) | >= 0.5.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_nxos"></a> [nxos](#provider\_nxos) | >= 0.3.7 |
+| <a name="provider_nxos"></a> [nxos](#provider\_nxos) | >= 0.5.0 |
 
 ## Inputs
 
@@ -79,8 +79,8 @@ module "nxos_interface_ethernet" {
 
 | Name | Type |
 |------|------|
-| [nxos_ipv4_interface.ipv4If](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/ipv4_interface) | resource |
-| [nxos_ipv4_interface_address.ipv4Addr](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/ipv4_interface_address) | resource |
-| [nxos_physical_interface.l1PhysIf](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/physical_interface) | resource |
-| [nxos_physical_interface_vrf.nwRtVrfMbr](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/physical_interface_vrf) | resource |
+| [nxos_ipv4_interface.ipv4If](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/ipv4_interface) | resource |
+| [nxos_ipv4_interface_address.ipv4Addr](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/ipv4_interface_address) | resource |
+| [nxos_physical_interface.l1PhysIf](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/physical_interface) | resource |
+| [nxos_physical_interface_vrf.nwRtVrfMbr](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/physical_interface_vrf) | resource |
 <!-- END_TF_DOCS -->
